@@ -8,7 +8,7 @@ window.onload = function () {
     document.body.classList.add('loaded');
     document.body.classList.remove('loaded_hiding');
   }, 10);
-};
+}
 
 // Мобильное меню бургер
 function burgerMenu() {
@@ -290,5 +290,26 @@ if (animItems.length > 0) {
 	setTimeout(() => {
 		animOnScroll();
 	}, 300);
+};
+
+function budgetPage() {
+  const sectionBudget = document.querySelector('.budget')
+
+  if (!sectionBudget) {
+    return null
+  }
+
+  else {
+    const budgetElement = document.querySelectorAll('.budget-show')
+    var   elementNum = 0; 
+    budgetElement.forEach(element => {
+      setTimeout(() => 
+      element.style.opacity = "1", 500 + elementNum,
+      element.style.transform = "translateX(0%)", 500 + elementNum);
+      elementNum += 300
+    });
+
+  }
 }
 
+budgetPage();

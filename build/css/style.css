@@ -1039,6 +1039,16 @@ svg[hidden] {
   padding: 20px;
   -webkit-box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
           box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.undergraduate__header:hover {
+  -webkit-transform: translateZ(50px) translateY(-12px);
+  transform: translateZ(50px) translateY(-12px);
+  -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
 }
 
 .undergraduate__header-title {
@@ -1054,7 +1064,7 @@ svg[hidden] {
 .undergraduate__header-title::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   height: 3px;
   width: 100%;
@@ -1066,6 +1076,16 @@ svg[hidden] {
   padding: 20px;
   -webkit-box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
           box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.undergraduate__item:hover {
+  -webkit-transform: translateZ(50px) translateY(-12px);
+  transform: translateZ(50px) translateY(-12px);
+  -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
 }
 
 .undergraduate__title {
@@ -1081,7 +1101,7 @@ svg[hidden] {
 .undergraduate__title::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   height: 3px;
   width: 100%;
@@ -1101,6 +1121,16 @@ svg[hidden] {
   padding: 20px;
   -webkit-box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
           box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.magistracy__header:hover {
+  -webkit-transform: translateZ(50px) translateY(-12px);
+  transform: translateZ(50px) translateY(-12px);
+  -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
 }
 
 .magistracy__header-title {
@@ -1116,7 +1146,7 @@ svg[hidden] {
 .magistracy__header-title::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   height: 3px;
   width: 100%;
@@ -1128,14 +1158,16 @@ svg[hidden] {
   padding: 20px;
   -webkit-box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
           box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
-  -webkit-transition: all ease 1s;
-  -o-transition: all ease 1s;
-  transition: all ease 1s;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .magistracy__item:hover {
-  -webkit-animation: shadow-drop-2-bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: shadow-drop-2-bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-transform: translateZ(50px) translateY(-12px);
+  transform: translateZ(50px) translateY(-12px);
+  -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
 }
 
 .magistracy__title {
@@ -1151,7 +1183,7 @@ svg[hidden] {
 .magistracy__title::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   height: 3px;
   width: 100%;
@@ -1196,6 +1228,13 @@ svg[hidden] {
     -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
     box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
   }
+}
+
+.budget-show {
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
 }
 
 .footer {
