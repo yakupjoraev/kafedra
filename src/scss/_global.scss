@@ -1,0 +1,87 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body Locked
+body {
+    &.locked {
+        overflow: hidden;
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/////////////////// PRELOADE//////////////////////////////
+/* From uiverse.io by @AqFox */
+
+.preloader__wrapper {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #fff;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+
+.preloader__inner {
+  transform-style: preserve-3d;
+}
+
+.preloader__inner >div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+
+
+.loaded_hiding .preloader__wrapper {
+  transition: 0.5s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader__wrapper {
+  display: none;
+}
+

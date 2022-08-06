@@ -1,0 +1,37 @@
+<!-- Modal -->
+<div class="modal__wrapper">
+  <div class="modal">
+    <div class="modal__body form-popup">
+      <div class="form-popup__img">
+        <img src="img/moon-popup.jpg" alt="moon img in popup">
+      </div>
+      <form class="form-popup__inner" action="#">
+        <div class="modal__header">
+          <div class="modal__header-left">
+            <div class="modal__title"><span>Оставьте заявку</span></div>
+            <div class="modal__text"><span>Оставьте заявку и наш менеджер свяжется с вами
+                в течение 10 -15 минут</span></div>
+          </div>
+          <div class="modal__close"> <img src="./img/close-popup.svg" alt="close popup"></div>
+        </div>
+        <input autocomplete="off" type="text" data-error="Ошибка" placeholder="Ваше имя*"
+          class="form-popup__input js-input">
+        <input autocomplete="off" type="email" data-error="Ошибка" placeholder="MAGWAI@info.ru"
+          class="form-popup__input js-input js-input-email">
+        <input autocomplete="off" type="tel" data-error="Ошибка" placeholder="+7(___)"
+          class="form-popup__input js-input js-input-phone">
+        <textarea autocomplete="off" placeholder="Ваш вопрос*" data-error="Ошибка"
+          class="form-popup__input form-popup__textarea"></textarea>
+        <div class="form-popup__group">
+          <button type="submit" class="form-popup__button btn">ОСТАВИТЬ ЗАЯВКУ</button>
+          <div class="form-popup__useragreement">
+            <p>
+              Нажимая на кнопку “Оставить заявку” вы соглашаетесь
+              с <a href="">“Пользовательским соглашением”</a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

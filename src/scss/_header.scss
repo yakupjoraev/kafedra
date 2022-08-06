@@ -1,0 +1,360 @@
+// Header
+
+// dropdown subMenu styles
+
+/**
+ * Initial state, hidden off screen
+ */
+.clicky-menu ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  /*[1]*/
+}
+
+/**
+ * No JS fallback
+ *
+ * Triggers menus on hover rather than click. Supports keyboard navigation in modern browsers.
+ */
+.clicky-menu.no-js li:hover>ul {
+  visibility: visible;
+}
+
+.clicky-menu.no-js li:focus-within>ul {
+  /*[2]*/
+  visibility: visible;
+}
+
+/**
+ * Open/Close Menu Behavior with JS
+ */
+.clicky-menu ul[aria-hidden="false"] {
+  visibility: visible;
+}
+
+/* Prevent offscreen-submenus */
+.clicky-menu .sub-menu--right {
+  left: 0;
+
+}
+
+/* Hidden SVG used for down arrows */
+svg[hidden] {
+  display: none;
+  position: absolute;
+}
+
+/* Top Level Items */
+
+
+@media (min-width: 540px) {
+
+  .clicky-menu .submenu__item-link,
+  .clicky-menu>li>button {
+    justify-content: center;
+  }
+}
+
+/* Icon */
+.menu__item svg {
+  align-self: center;
+  width: 1em;
+  height: 1em;
+  margin-left: .5em;
+  transition: all 0.3s ease 0s;
+}
+
+.clicky-menu [aria-expanded="true"] svg {
+  transform: scaleY(-1);
+}
+
+/* Submenu Styles */
+.clicky-menu ul {
+  margin-top: .25em;
+  padding: 0;
+  list-style: none;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+/* Responsive Submenu Behavior */
+.clicky-menu ul[aria-hidden="false"] {
+  position: static;
+  flex: 0 0 auto;
+}
+
+@media (min-width: 540px) {
+  .clicky-menu ul[aria-hidden="false"] {
+    position: absolute;
+    width: fit-content;
+  }
+}
+
+/* Submenu Links */
+.clicky-menu .submenu__item-link {
+  display: block;
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  background-color: black;
+  transition: all 0.3s ease 0s;
+  border: 1px solid black;
+
+  &:hover{
+    background-color: white;
+    color: black;
+  }
+}
+
+@media (min-width: 540px) {
+  .clicky-menu .submenu__item-link {
+    white-space: nowrap;
+  }
+}
+
+.submenu {
+  z-index: 2;
+}
+
+// Navbar
+nav {}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 5px 15px rgb(22 28 45 / 10%);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  a {
+    color: white;
+  }
+
+  @media (max-width: $breakpoint768) {
+    width: 60px;
+    height: 60px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  // .menu__item
+  &__item {
+    position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    margin-left: 25px;
+  }
+
+  // .menu__item-link
+  &__item-link {
+    display: flex;
+    padding: 30px 0;
+    font-size: 17px;
+    color: black;
+    font-weight: 700;
+    background-color: transparent;
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease;
+
+    @media (max-width: $breakpoint480) {
+      font-size: 15px;
+  }
+
+    &:last-child {
+      padding-right: 20px;
+    }
+
+    &:hover {
+      background: transparent;
+      color: #1976d2;
+    }
+
+    &:hover::after,
+    &:hover::before {
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+      width: 100%;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0px;
+      width: 0px;
+      height: 3px;
+      background: #000;
+      transition: all 0.4s ease;
+    }
+
+    &::after {
+      top: inherit;
+      left: inherit;
+      bottom: 0;
+      right: 0;
+      background: #1976d2;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+// Burger menu styles
+@media screen and (max-width: $burgerBreakpoint) {
+
+  // .menu
+  .menu {
+    position: fixed;
+    background: #131418;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+
+    &.active {
+      display: flex;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 50vw;
+      flex-direction: column;
+      pointer-events: all;
+      justify-content: center;
+      align-items: center;
+      z-index: 22;
+      animation: fade 0.1s linear;
+    }
+  }
+
+  // .burger
+  .burger {
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 30px;
+    margin-right: 20px;
+    z-index: 102;
+    cursor: pointer;
+
+    &.active-burger {
+      &:before {
+        background: $burgerActiveColor;
+        transform: rotate(45deg);
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        top: 8px;
+      }
+
+      &:after {
+        background: $burgerActiveColor;
+        transform: rotate(-45deg);
+        bottom: 10px;
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+      }
+
+      & span {
+        transform: scale(0);
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: $burgerColor;
+      transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      position: absolute;
+      top: 9px;
+      right: 0;
+      width: 100%;
+      background: $burgerColor;
+      height: 2px;
+      transform: scale(1);
+      transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    }
+  }
+
+  // .menu__item
+  .menu__item {
+    margin-top: 0;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  // .menu__link
+  .menu__item-link {
+    padding: 0;
+    color: white;
+    margin: 0 auto;
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  .clicky-menu ul {
+    position: static;
+    visibility: visible;
+    width: 51vw;
+    margin-top: 0;
+    background-color: #fff;
+    border-radius: 0;
+  }
+
+  .submenu__item {
+    text-align: center;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+
+  .clicky-menu .submenu__item-link {
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 0;
+  }
+
+  .menu__item svg {
+    display: none;
+  }
+
+}
