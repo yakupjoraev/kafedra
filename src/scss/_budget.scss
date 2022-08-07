@@ -21,7 +21,7 @@
     }
 
     @media (max-width: $breakpoint480) {
-      font-size: 22px;
+      font-size: 18px;
     }
   }
 
@@ -311,6 +311,128 @@
 }
 
 .budget-show {
-  transform: translateX(-100%);
-  opacity: 0;
+  transform: translateX(-120%);
+  // opacity: 0;
+}
+
+.accordion {
+  .accordion__item {
+      border-bottom: 1px solid#C4C4C4;
+
+      &.accordion__item-active {
+          .accordion__item-content {
+              display: flex;
+              justify-content: flex-start;
+
+              @media (max-width: $breakpoint768) {
+                flex-wrap: wrap;
+              }
+          }
+
+          .line2 {
+              transform: translate(0) !important;
+              transition: .1s all ease;
+          }
+
+          .line1 {
+              opacity: 0;
+              transition: .1s all ease;
+
+          }
+      }
+
+
+      .accordion__item-trigger {
+          display: flex;
+          padding: 20px 0;
+          align-items: center;
+          cursor: pointer;
+
+          @media (max-width: $breakpoint480) {
+          }
+
+
+          .trigger__img {
+              position: relative;
+              margin-left: auto;
+
+              @media (max-width: $breakpoint480) {
+                margin-left: 50px;
+              }
+
+              .line1 {
+                  display: block;
+                  width: 18px;
+                  height: 2px;
+                  background: black;
+                  border-radius: 100px;
+              }
+
+              .line2 {
+                  display: block;
+                  width: 18px;
+                  height: 2px;
+                  background: black;
+                  margin-top: -2px;
+                  border-radius: 100px;
+                  transform: rotate(90deg);
+              }
+          }
+      }
+
+      .accordion__item-content {
+          padding: 10px 0;
+          display: none;
+          animation: fade .3s ease;
+
+      }
+
+
+  }
+
+}
+
+.content-item {
+  // .content-item__list
+
+  &__list {
+    flex: 0 1 25%;
+
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 50%;
+      margin-bottom: 20px;
+    }
+  }
+
+  // .content-item__item
+
+  &__item {
+   align-self: start;
+  }
+
+  // .content-item__text
+
+  &__text {
+    padding: 10px;
+    min-height: 50px;
+    white-space: nowrap;
+
+    &:first-child{
+      font-weight: 700;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #000;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      white-space: inherit;
+      font-size: 12px;
+    }
+  }
 }

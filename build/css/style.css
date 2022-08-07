@@ -1231,10 +1231,107 @@ svg[hidden] {
 }
 
 .budget-show {
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-120%);
+      -ms-transform: translateX(-120%);
+          transform: translateX(-120%);
+}
+
+.accordion .accordion__item {
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.accordion .accordion__item.accordion__item-active .accordion__item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.accordion .accordion__item.accordion__item-active .line2 {
+  -webkit-transform: translate(0) !important;
+      -ms-transform: translate(0) !important;
+          transform: translate(0) !important;
+  -webkit-transition: 0.1s all ease;
+  -o-transition: 0.1s all ease;
+  transition: 0.1s all ease;
+}
+
+.accordion .accordion__item.accordion__item-active .line1 {
   opacity: 0;
+  -webkit-transition: 0.1s all ease;
+  -o-transition: 0.1s all ease;
+  transition: 0.1s all ease;
+}
+
+.accordion .accordion__item .accordion__item-trigger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.accordion .accordion__item .accordion__item-trigger .trigger__img {
+  position: relative;
+  margin-left: auto;
+}
+
+.accordion .accordion__item .accordion__item-trigger .trigger__img .line1 {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: black;
+  border-radius: 100px;
+}
+
+.accordion .accordion__item .accordion__item-trigger .trigger__img .line2 {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: black;
+  margin-top: -2px;
+  border-radius: 100px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.accordion .accordion__item .accordion__item-content {
+  padding: 10px 0;
+  display: none;
+  -webkit-animation: fade 0.3s ease;
+          animation: fade 0.3s ease;
+}
+
+.content-item__list {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+}
+
+.content-item__item {
+  -ms-flex-item-align: start;
+      align-self: start;
+}
+
+.content-item__text {
+  padding: 10px;
+  min-height: 50px;
+  white-space: nowrap;
+}
+
+.content-item__text:first-child {
+  font-weight: 700;
+}
+
+.content-item__text:not(:last-child) {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
 }
 
 .footer {
@@ -1894,6 +1991,22 @@ svg[hidden] {
     font-size: 22px;
   }
 
+  .accordion .accordion__item.accordion__item-active .accordion__item-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .content-item__list {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    margin-bottom: 20px;
+  }
+
+  .content-item__text {
+    font-size: 14px;
+  }
+
   .footer__copyright-text {
     font-size: 12px;
   }
@@ -2013,7 +2126,7 @@ svg[hidden] {
   }
 
   .budget__title {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .undergraduate__header-title {
@@ -2034,6 +2147,15 @@ svg[hidden] {
   .magistracy__title {
     margin-bottom: 10px;
     font-size: 18px;
+  }
+
+  .accordion .accordion__item .accordion__item-trigger .trigger__img {
+    margin-left: 50px;
+  }
+
+  .content-item__text {
+    white-space: inherit;
+    font-size: 12px;
   }
 
   .footer {
