@@ -78,6 +78,9 @@ h6 {
 }
 
 body {
+  background: -webkit-gradient(linear, left bottom, left top, from(#afd9f7), to(#f0f2ff));
+  background: -o-linear-gradient(bottom, #afd9f7, #f0f2ff);
+  background: linear-gradient(360deg, #afd9f7, #f0f2ff);
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -422,8 +425,6 @@ svg[hidden] {
   letter-spacing: 8px;
   margin-bottom: 20px;
   position: relative;
-  -webkit-animation: text 2s 2;
-          animation: text 2s 2;
 }
 
 .hero__subtitle {
@@ -1861,13 +1862,6 @@ svg[hidden] {
   opacity: 1;
 }
 
-body {
-  background-color: #FFE53B;
-  background-image: -o-linear-gradient(303deg, #FFE53B 0%, #fd3838 74%);
-  background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);
-  min-height: 100vh;
-}
-
 .our-graduates__title {
   margin-bottom: 20px;
   padding: 20px;
@@ -1923,7 +1917,7 @@ body {
   left: 0;
   height: 3px;
   width: 100%;
-  background-color: #FFE53B;
+  background-color: #1976d2;
 }
 
 .our-graduates__header-item {
@@ -3065,8 +3059,6 @@ body {
   .hero__title {
     font-size: 25px;
     letter-spacing: 2px;
-    -webkit-animation: texttwo 2s 2;
-            animation: texttwo 2s 2;
   }
 
   .hero__subtitle {

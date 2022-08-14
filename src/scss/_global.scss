@@ -20,6 +20,9 @@
 
 // Body Locked
 body {
+  background: -webkit-linear-gradient(360deg, #afd9f7,#f0f2ff);
+  background: linear-gradient(360deg, #afd9f7,#f0f2ff);
+
   font-family: 'Fira Sans', sans-serif;
     &.locked {
         overflow: hidden;
