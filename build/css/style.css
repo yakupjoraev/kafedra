@@ -1334,6 +1334,163 @@ svg[hidden] {
   border-bottom: 1px solid #000;
 }
 
+.teach__header {
+  margin-bottom: 20px;
+  padding: 20px;
+  -webkit-box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
+          box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.teach__header:hover {
+  -webkit-transform: translateZ(50px) translateY(-12px);
+  transform: translateZ(50px) translateY(-12px);
+  -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+}
+
+.teach__title {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.teach__title::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #1976d2;
+}
+
+.teach__header-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.teach__header-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.teach__middle {
+  margin-bottom: 20px;
+  padding: 20px;
+  -webkit-box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
+          box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.teach__middle:hover {
+  -webkit-transform: translateZ(50px) translateY(-12px);
+  transform: translateZ(50px) translateY(-12px);
+  -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+}
+
+.teach__middle-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.teach__middle-text {
+  font-size: 20px;
+}
+
+.teach__footer-list {
+  margin-bottom: 20px;
+  padding: 20px;
+  -webkit-box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
+          box-shadow: 0 5px 15px rgba(22, 28, 45, 0.1);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.teach__footer-list:hover {
+  -webkit-transform: translateZ(50px) translateY(-12px);
+  transform: translateZ(50px) translateY(-12px);
+  -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+}
+
+.teach__footer-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.teach__footer-item:not(:first-child) {
+  width: 100%;
+}
+
+.teach__footer-title {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.teach__footer-title::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #1976d2;
+}
+
+.teach__footer-text {
+  font-size: 20px;
+}
+
+.teach__footer-text:nth-child(1) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 3%;
+          flex: 0 1 3%;
+}
+
+.teach__footer-text:nth-child(2) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
+}
+
+.teach__footer-text:nth-child(3) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
+  text-align: right;
+}
+
+.teach__footer-text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.teach-show {
+  -webkit-transform: translateX(500%);
+      -ms-transform: translateX(500%);
+          transform: translateX(500%);
+}
+
+.teach-show-bottom {
+  -webkit-transform: translateY(500%);
+      -ms-transform: translateY(500%);
+          transform: translateY(500%);
+}
+
 .footer {
   padding: 50px 0;
   background-color: #000;
@@ -2007,6 +2164,14 @@ svg[hidden] {
     font-size: 14px;
   }
 
+  .teach__title {
+    font-size: 22px;
+  }
+
+  .teach__footer-title {
+    font-size: 22px;
+  }
+
   .footer__copyright-text {
     font-size: 12px;
   }
@@ -2156,6 +2321,34 @@ svg[hidden] {
   .content-item__text {
     white-space: inherit;
     font-size: 12px;
+  }
+
+  .teach__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .teach__header-text {
+    font-size: 16px;
+  }
+
+  .teach__middle-text {
+    font-size: 16px;
+  }
+
+  .teach__footer-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .teach__footer-text {
+    font-size: 12px;
+  }
+
+  .teach__footer-text:nth-child(1) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 7%;
+            flex: 0 1 7%;
   }
 
   .footer {

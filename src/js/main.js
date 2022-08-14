@@ -333,3 +333,33 @@ function accordion() {
   })
 }
 accordion();
+
+// анимация для страницы teach
+
+function teachPage() {
+  const sectionTeach= document.querySelector('.teach')
+
+  if (!sectionTeach) {
+    return null
+  }
+
+  else {
+    const budgetElement = document.querySelectorAll('.teach-show')
+    const budgetElementBottom = document.querySelectorAll('.teach-show-bottom')
+    var   elementNum = 0; 
+    budgetElement.forEach(element => {
+      setTimeout(() => 
+      element.style.transform = "translateX(0%)", 700 + elementNum);
+      elementNum += 200
+    });
+
+    budgetElementBottom.forEach(element => {
+      setTimeout(() => 
+      element.style.transform = "translateY(0%)", 700 + elementNum);
+      elementNum += 200
+    })
+
+  }
+}
+
+teachPage();
