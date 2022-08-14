@@ -364,3 +364,26 @@ function teachPage() {
 }
 
 teachPage();
+
+// анимация для страницы teach
+
+function directionWorksPage() {
+  const sectionTeach= document.querySelector('.direction-works')
+
+  if (!directionWorksPage) {
+    return null
+  }
+
+  else {
+    const budgetElement = document.querySelectorAll('.direction-works-show')
+    var   elementNum = 0; 
+    budgetElement.forEach(element => {
+      setTimeout(() => 
+      element.style.transform = "translateX(0%)", 700 + elementNum);
+      elementNum += 200
+    });
+
+  }
+}
+
+directionWorksPage();
