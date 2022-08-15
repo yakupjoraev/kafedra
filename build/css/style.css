@@ -176,7 +176,7 @@ body.locked {
 .clicky-menu ul {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -108px;
   visibility: hidden;
   /*[1]*/
 }
@@ -202,12 +202,6 @@ body.locked {
 
 .clicky-menu ul[aria-hidden=false] {
   visibility: visible;
-}
-
-/* Prevent offscreen-submenus */
-
-.clicky-menu .sub-menu--right {
-  left: 0;
 }
 
 /* Hidden SVG used for down arrows */
@@ -332,6 +326,10 @@ svg[hidden] {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: 25px;
+}
+
+.menu__item:last-child {
+  padding-right: 20px;
 }
 
 .menu__item-link {
@@ -2282,6 +2280,7 @@ svg[hidden] {
 }
 
 .contact-info__link {
+  position: relative;
   font-size: 22px;
   text-decoration: none;
   color: inherit;
@@ -2404,7 +2403,7 @@ svg[hidden] {
   }
 }
 
-@media (min-width: 540px) {
+@media (min-width: 991.98px) {
   .clicky-menu .submenu__item-link,
   .clicky-menu > li > button {
     -webkit-box-pack: center;
@@ -2563,6 +2562,20 @@ svg[hidden] {
     font-size: 18px;
   }
 
+  .contact-info__link::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #1976d2;
+  }
+
+  .contact-info__link:before {
+    height: 1px;
+  }
+
   .contact-info__addres {
     font-size: 18px;
     text-align: center;
@@ -2575,6 +2588,12 @@ svg[hidden] {
 }
 
 @media screen and (max-width: 991.98px) {
+  /* Prevent offscreen-submenus */
+
+  .clicky-menu .sub-menu--right {
+    left: 0;
+  }
+
   .menu {
     position: fixed;
     background: #131418;
@@ -2605,6 +2624,7 @@ svg[hidden] {
         -ms-flex-align: center;
             align-items: center;
     z-index: 22;
+    overflow: hidden;
     -webkit-animation: fade 0.1s linear;
             animation: fade 0.1s linear;
   }
@@ -2690,6 +2710,10 @@ svg[hidden] {
             align-items: center;
   }
 
+  .menu__item:last-child {
+    padding-right: 0;
+  }
+
   .menu__item-link {
     padding: 0;
     color: white;
@@ -2711,8 +2735,8 @@ svg[hidden] {
 
   .submenu__item {
     text-align: center;
-    font-weight: 700;
     margin: 20px 0;
+    font-size: 14px;
   }
 
   .clicky-menu .submenu__item-link {
