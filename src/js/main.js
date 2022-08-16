@@ -387,7 +387,14 @@ function directionWorksPage() {
 
 directionWorksPage();
 
-var swiper = new Swiper('.blog-slider', {
+function blogPage() {
+  const container = document.querySelector('.our-graduates')
+
+  if (!container) {
+    return null
+  }
+
+  var swiperBlogPage = new Swiper('.blog-slider', {
   spaceBetween: 30,
   effect: 'fade',
   loop: true,
@@ -400,3 +407,40 @@ var swiper = new Swiper('.blog-slider', {
     clickable: true,
   }
 });
+}
+
+blogPage ();
+
+
+function ourLifeSlider() {
+  const container = document.querySelector('.our-life')
+
+  if (!container) {
+    return null
+  }
+  
+  let swiperSliderSimpleA = new Swiper('.slider-simple-a.swiper-container', {
+    navigation: {
+        nextEl: '.swiper-container.slider-simple-a .slider-next',
+        prevEl: '.swiper-container.slider-simple-a .slider-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+        delay: 5000,
+    },
+    spaceBetween: 20,
+    slidesPerView: 'auto',
+   
+
+    centeredSlides: true,
+    speed: 600,
+    // centeredSlidesBounds: true,
+});
+}
+
+ourLifeSlider();
