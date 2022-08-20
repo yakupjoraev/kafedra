@@ -449,7 +449,7 @@ function progressPage() {
   const container = document.querySelector('.progress')
 
   if (!container) {
-    return neull
+    return null
   }
 
   let SwiperTop = new Swiper('.swiper--top', {
@@ -464,21 +464,8 @@ function progressPage() {
     allowTouchMove: false,
     disableOnInteraction: true
   });
-
-  let SwiperMiddle = new Swiper('.swiper--middle', {
-    spaceBetween: 0,
-    centeredSlides: true,
-    speed: 6000,
-    autoplay: {
-      delay: 1,
-    },
-    loop: true,
-    slidesPerView:'auto',
-    allowTouchMove: false,
-    disableOnInteraction: true
-  });
   
-  let SwiperBottom = new Swiper('.swiper--bottom', {
+  let SwiperMiddle = new Swiper('.swiper--middle', {
     spaceBetween: 0,
     centeredSlides: true,
     speed: 6000,
@@ -492,6 +479,20 @@ function progressPage() {
     allowTouchMove: false,
     disableOnInteraction: true
   });
+
+  let SwiperBottom = new Swiper('.swiper--bottom', {
+    spaceBetween: 0,
+    centeredSlides: true,
+    speed: 6000,
+    autoplay: {
+      delay: 1,
+    },
+    loop: true,
+    slidesPerView:'auto',
+    allowTouchMove: false,
+    disableOnInteraction: true
+  });
+  
   
 }
 

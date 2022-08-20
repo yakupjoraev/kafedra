@@ -1860,13 +1860,13 @@ svg[hidden] {
   opacity: 1;
 }
 
-.progress-slider {
+.swiper-container {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.progress-slider:after {
+.swiper-container:after {
   content: "";
   display: block;
   width: 200%;
@@ -1885,18 +1885,18 @@ svg[hidden] {
   z-index: 1;
 }
 
-.progress-slider.swiper--bottom:after {
+.swiper-container.swiper--middle:after {
   animation-direction: reverse;
 }
 
-.progress-slider {
+.swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   -o-transition-timing-function: linear !important;
      transition-timing-function: linear !important;
   position: relative;
 }
 
-.progress-slide {
+.swiper-slide {
   text-align: center;
   font-size: 33px;
   background: #fff;
