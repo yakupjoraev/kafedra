@@ -10,6 +10,17 @@ window.onload = function () {
   }, 10);
 }
 
+//fixed links
+
+const trigger = document.querySelector('.consultations__more')
+const social = document.querySelector('.consultations__list')
+
+if (trigger && social) {
+  trigger.addEventListener('click', () => {
+    social.classList.toggle('active')
+  })
+}
+
 // Мобильное меню бургер
 function burgerMenu() {
   const burger = document.querySelector('.burger')
